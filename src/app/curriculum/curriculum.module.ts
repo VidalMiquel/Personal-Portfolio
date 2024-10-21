@@ -9,6 +9,8 @@ import { MaterialModule } from '../material/material.module';
 import { RemoveDashPipe } from './pipes/remove-dash.pipe';
 import { ProjectCardComponent } from './components/portfolio/project-card/project-card.component';
 import { IntroductionComponent } from './components/header/introduction/header.component';
+import { ContactComponent } from './components/header/introduction/contact/contact.component';
+
 @NgModule({
   declarations: [
     MainPageComponent,
@@ -17,15 +19,20 @@ import { IntroductionComponent } from './components/header/introduction/header.c
     IntroductionComponent,
     NavComponent,
     ProjectCardComponent,
-    RemoveDashPipe
+    RemoveDashPipe,
+    ContactComponent
+    
   ],
   imports: [CommonModule,
     HttpClientModule,
     MaterialModule
   ],
-  exports: [    MainPageComponent,
+  exports: [    
+    MainPageComponent,
     PortfolioComponent,
     AboutComponent,
-    NavComponent],
+    NavComponent,
+    ContactComponent
+  ],
 })
 export class CurriculumModule {}
