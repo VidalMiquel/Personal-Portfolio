@@ -9,7 +9,8 @@ import { MaterialModule } from '../material/material.module';
 import { RemoveDashPipe } from './pipes/remove-dash.pipe';
 import { ProjectCardComponent } from './components/portfolio/project-card/project-card.component';
 import { IntroductionComponent } from './components/header/introduction/header.component';
-import { ContactComponent } from './components/header/introduction/contact/contact.component';
+import { ContactComponent } from './components/shared/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +21,8 @@ import { ContactComponent } from './components/header/introduction/contact/conta
     NavComponent,
     ProjectCardComponent,
     RemoveDashPipe,
-    ContactComponent
-    
+    ContactComponent,
+    FooterComponent
   ],
   imports: [CommonModule,
     HttpClientModule,
@@ -32,7 +33,8 @@ import { ContactComponent } from './components/header/introduction/contact/conta
     PortfolioComponent,
     AboutComponent,
     NavComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
 })
 export class CurriculumModule {}
