@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { navItem } from '../interfaces/nav-item.interface';
 import { GitHubProject } from '../interfaces/project-interface';
 import { HttpClient } from '@angular/common/http';
 import { catchError, Observable, of, tap } from 'rxjs';
+import { ContactElement } from '../interfaces/contact-element.interface';
 
 @Injectable({ providedIn: 'root' })
 export class CurriculumService {
@@ -10,23 +10,31 @@ export class CurriculumService {
 
   constructor(private http: HttpClient) {}
 
-  public navItems: navItem[] = [
+  public contactComponent: ContactElement[] = [
     {
-      redirectName: 'portfolio',
-      name: 'Portfolio',
+      redirectName: 'https://github.com/VidalMiquel',
+      name: 'github',
+      html:'fab fa-github'
     },
     {
-      redirectName: 'about',
-      name: 'About',
+      redirectName: 'https://www.linkedin.com/in/mvc4',
+      name: 'linkedin',
+      html:'fab fa-linkedin'
     },
     {
-      redirectName: 'contact',
-      name: 'Contact',
+      redirectName: 'mailto:miquelvidalcortes@gmail.com',
+      name: 'envelope',
+      html:'fas fa-envelope'
     },
+    {
+      redirectName: 'tel:+630232894',
+      name: 'phone',
+      html:'fas fa-phone'
+    }
   ];
 
-  getNavItems(): navItem[] {
-    return this.navItems;
+  getContactComponent(): ContactElement[] {
+    return this.contactComponent;
   }
 
   getProjectsHttpRequest(): Observable<GitHubProject[] | undefined> {
