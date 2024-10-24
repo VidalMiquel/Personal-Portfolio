@@ -23,13 +23,18 @@ export class CurriculumService {
     },
     {
       redirectName: 'mailto:miquelvidalcortes@gmail.com',
-      name: 'envelope',
+      name: 'mail',
       html:'fas fa-envelope'
     },
     {
       redirectName: 'tel:+630232894',
       name: 'phone',
       html:'fas fa-phone'
+    },
+    {
+      redirectName: 'assets/cvMiquelVidal.pdf',
+      name: 'resume',
+      html:'fas fa-file'
     }
   ];
 
@@ -40,8 +45,7 @@ export class CurriculumService {
   getProjectsHttpRequest(): Observable<GitHubProject[] | undefined> {
     return this.http.get<GitHubProject[]>(this.baseUrl).pipe(
       tap((projects) => {
-        // Imprimir en consola los proyectos obtenidos
-        console.log('Proyectos obtenidos:', projects);
+
       }),
       catchError((error) => {
         console.error('Error fetching projects:', error);
