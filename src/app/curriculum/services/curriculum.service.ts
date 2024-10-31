@@ -27,7 +27,7 @@ export class CurriculumService {
       html:'fas fa-envelope'
     },
     {
-      redirectName: 'tel:+630232894',
+      redirectName: 'tel:+34 630232894',
       name: 'phone',
       html:'fas fa-phone'
     },
